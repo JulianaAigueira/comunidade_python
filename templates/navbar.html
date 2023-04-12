@@ -1,17 +1,17 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid container">
-    <a class="navbar-brand" href="/">Comunidade Python</a>
+    <a class="navbar-brand" href="{{ url_for('home') }}">Comunidade Python</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">Início</a>
+          <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Início</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/usuarios">Usuários</a>
+          <a class="nav-link" href="{{ url_for('usuarios') }}">Usuários</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contato">Contato</a>
+          <a class="nav-link" href="{{ url_for('contato') }}">Contato</a>
         </li>
 
       </ul>
