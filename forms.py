@@ -13,5 +13,5 @@ class FormcriarConta(FlaskForm):
 class FormLogin(FlaskForm):
     email = StringField('E-mail', validators=[DataRequired(), Email()])
     senha = PasswordField('Senha', validators=[DataRequired(), Length(6, 20)])
-    botao_submit_fazerlogin = SubmitField('Fazer Login')
+    botao_submit_login = SubmitField('Fazer Login')
 
