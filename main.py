@@ -1,11 +1,21 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from forms import FormLogin, FormcriarConta
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
 lista_usuarios = ['Lira', 'João', 'Maria', 'Juliana', 'Lucas', 'Julia']
 
 app.config['SECRET_KEY'] = '78be893bf8a80da4ad549bae099aee49'
+
+#--------------------------------------------------------------
+#               CRIANDO O BANCO DE DADOS
+#--------------------------------------------------------------
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///comunidade.db'
+
+database = SQLAlchemy(app)
+#--------------------------------------------------------------
 
 @app.route("/")# atribui uma nova funcionalidade na função a baixo
 def home():
