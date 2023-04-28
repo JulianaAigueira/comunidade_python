@@ -26,9 +26,18 @@ from models import Usuario, Post
     print(usuario_teste)
     print(usuario_teste.username)'''
 
-with app.app_context():
-    meu_post = Post(id_usuario=1, titulo='Primeiro Post da Juliana!', corpo='Aprendendo Flask!')
+'''with app.app_context():
+    meu_post = Post(id_usiario=1, titulo='Primeiro Post da Juliana!', corpo='Aprendendo Flask!')
     database.session.add(meu_post)
-    database.session.commit()
+    database.session.commit()'''
+
+# with app.app_context():
+#     post = Post.query.first()
+#     print(post)
+#     print(post.titulo)
+#     print(post.corpo)
+#     print(post.autor.email)
 
 
+with app.app_context():
+    database.create_all()
